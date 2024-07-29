@@ -1,5 +1,6 @@
-export interface IExperience {
-  id: string;
+import { IItem } from './Item';
+
+export interface IExperience extends IItem {
   title: string;
   company: string;
   location: string;

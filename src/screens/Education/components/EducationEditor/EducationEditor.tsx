@@ -39,6 +39,14 @@ const EducationEditor = ({ education, onSave }: IEducationEditorProps) => {
         onChange={handleFieldChange}
         onBlur={handleSave}
       />
+      <Input
+        label='Start Date'
+        value={educationDetails.startDate}
+        type='date'
+        name='startDate'
+        onChange={handleFieldChange}
+        onBlur={handleSave}
+      />
     </div>
   );
 };

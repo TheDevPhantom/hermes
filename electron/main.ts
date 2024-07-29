@@ -1,6 +1,6 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'node:path';
-import { generatePDF } from './pdfGenerator';
+import { generatePDF } from './generation/pdfGenerator';
 
 // The built directory structure
 //
@@ -53,7 +53,7 @@ function createWindow() {
   }
 }
 
-ipcMain.on('generate-pdf', (event, data) => {
+ipcMain.on('generate-pdf', (_, data) => {
   const outputPath = 'output.pdf'; // Specify the desired output path
   generatePDF(data, outputPath);
 });

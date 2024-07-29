@@ -1,5 +1,6 @@
-export interface IProject {
-  id: string;
+import { IItem } from './Item';
+
+export interface IProject extends IItem {
   name: string;
   description: string;
   startDate: string;

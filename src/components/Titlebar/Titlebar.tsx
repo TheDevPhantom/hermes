@@ -3,13 +3,23 @@ import './_styles.titlebar.scss';
 import useStore from '../../store/store';
 
 const Titlebar = () => {
-  const { experiences, projects, profileDetails } = useStore();
+  const {
+    experiences,
+    projects,
+    profileDetails,
+    educations,
+    skills,
+    languages
+  } = useStore();
 
   const onGenerate = () => {
     ipcRenderer.send('generate-pdf', {
       profileDetails,
       experiences,
-      projects
+      projects,
+      education: educations,
+      skills,
+      languages
     });
   };
 

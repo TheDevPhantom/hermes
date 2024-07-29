@@ -11,6 +11,7 @@ import Experience from '../screens/Experience/Experience';
 import Education from '../screens/Education/Education';
 import Projects from '../screens/Projects/Projects';
 import Skills from '../screens/Skills/Skills';
+import Languages from '../screens/Languages/Languages';
 
 export interface ITab {
   icon: JSX.Element;
@@ -38,10 +39,15 @@ export default [
     icon: <FcOpenedFolder />,
     title: 'Projects',
     screen: <Projects />
+  },
+  {
+    icon: <FcIdea />,
+    title: 'Skills',
+    screen: <Skills />
+  },
+  {
+    icon: <FcFaq />,
+    title: 'Spoken Languages',
+    screen: <Languages />
   }
-  //   {
-  //     icon: <FcFaq />,
-  //     title: 'Languages',
-  //     screen: <div>Languages</div>
-  //   }
 ];
